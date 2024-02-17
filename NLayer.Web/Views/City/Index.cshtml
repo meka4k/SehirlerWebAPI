@@ -1,0 +1,25 @@
+﻿@model List<City>
+
+<table class="table table-bordered">
+
+	<thead>
+	<th>Şehir Adı</th>
+	<th>Ülke Adı</th>
+	<th>Eylemler</th>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.CityName</td>
+				<td>@item.CountryName</td>
+				<td><a href="/City/DeleteCity/@item.Id" class="btn btn-danger">Sil</a>
+					<a href="/City/UpdateCity/@item.Id" class="btn btn-warning">Güncelle</a>
+				</td>
+			</tr>
+		}
+	<td><a href="/City/AddCity" class="btn btn-success">Ekle</a></td>
+
+	</tbody>
+</table>

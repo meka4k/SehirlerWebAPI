@@ -1,0 +1,18 @@
+﻿@model City
+
+<form asp-action="UpdateCity" asp-controller="City">
+    <input type="hidden" asp-for="Id"/>
+    <label>Şehir Adı</label>
+    <input type="text" asp-for="CityName" class="form-control" />
+    <span asp-validation-for="CityName" class="text-danger"></span>
+    <br />
+
+    <label>Ülke Adı</label>
+    <input type="text" asp-for="CountryName" class="form-control" />
+    <span asp-validation-for="CountryName" class="text-danger"></span>
+
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+    <br />
+    <a class="btn btn-outline-dark mt-3" asp-action="Index">Listeye Dön</a>
+</form>
